@@ -12,6 +12,17 @@
     <!-- NOTE (stretch goal): To fully incorporate the highlighting library "hljs" we need to fill the empty link tag below to refer to a CSS file that will handle our text highlighting -->
     <link>
     <!-- TODO: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
+    <!-- <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+      </script> -->
     </head>
   <body>
     <header class="site-header clearfix">
@@ -41,6 +52,26 @@
                    4. Author's URL
                    5. Article category
                    6. Some way to know if this article is a draft or is published -->
+       <form id="new-form" class="" action="index.html" method="post">
+         <label>
+           <input type="text" id="article-title" placeholder="Article Title" required>
+         </label>
+         <label>
+         <textarea id="article-body" placeholder="Type your article here" rows="8" cols="80" required></textarea>
+       </label>
+       <label>
+         <input id="article-author" type="text" placeholder="Author Name" required>
+       </label>
+       <label>
+         <input id="article-author-url" type="text" placeholder="Author's URL" required>
+       </label>
+       <label>
+         <input id="article-catgory" type="text" placeholder="Catagory" required>
+       </label>
+       <label>
+         <input type="checkbox" id="article-published">Published
+       </label>
+       </form>
       </section>
 
       <section id="articles" class="tab-content">
@@ -66,6 +97,7 @@
       // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
+      articleView.initNewArticlePage();
     </script>
   </body>
 </html>
