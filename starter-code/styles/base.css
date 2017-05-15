@@ -1,3 +1,4 @@
+/*reset*/
 img {
   max-width: 100%;
 }
@@ -45,7 +46,25 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
+/*: Add the CSS needed to style the form*/
 #new-form label {
   display: block;
+}
+input, textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid lightgreen;
+  margin-top: 5%;
+  font-size: 2em;
+}
+textarea {
+  border: 3px solid lightgreen;
+  font-size: 1em;
+}
+#published {
+  font-size: 2em;
+  position: relative;
+  left: 2%;
+  bottom: 65px;
+  color: #6B6B6B;
 }
