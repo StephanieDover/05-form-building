@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
-
+    <link rel="stylesheet" href="vendor/styles/railscasts.css">
     <script id="article-template" type="text/x-handlebars-template">
       <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
         <header>
           <h1>{{title}}</h1>
-          <div class="byline">
             By <address><a href="{{authorUrl}}">{{author}}</a></address>
             {{publishStatus}}
           </div>
@@ -81,11 +80,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="/vendor/scripts/highlight.pack.js"></script>
+    <script src
     <script src="/scripts/blogArticles.js"></script>
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // REVIEW: What is this function doing? Why do we need it? Will we need one like it on the new article page that we are creating?
       articleView.initIndexPage()
     </script>
   </body>
