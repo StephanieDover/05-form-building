@@ -20,7 +20,10 @@
   width: 90%;
   margin: .2em 5%;
 }
-
+#article-published {
+  width: auto;
+  margin-right: .3em;
+}
 @media only screen and (min-width: 640px) {
   .heading-group-h1 {
     padding: .1em .1em .1em 2em;
